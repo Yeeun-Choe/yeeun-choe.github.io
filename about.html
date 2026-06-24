@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - Yeeun Choe</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { sans: ['Inter', 'sans-serif'] },
+                    colors: {
+                        brandLight: '#E8F1EC', 
+                        brandDark: '#3A634B', 
+                        brandAccent: '#2C4C38',
+                    },
+                    keyframes: {
+                        fadeInUp: {
+                            '0%': { opacity: '0', transform: 'translateY(15px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' },
+                        }
+                    },
+                    animation: {
+                        'fade-in-up-1': 'fadeInUp 0.6s ease-out forwards',
+                        'fade-in-up-2': 'fadeInUp 0.6s ease-out 0.2s forwards',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-[#F8FAFC] text-gray-800 antialiased selection:bg-brandLight selection:text-brandDark min-h-screen flex flex-col">
+
+    <nav class="fixed w-full top-0 bg-[#F8FAFC]/90 backdrop-blur-md z-50 border-b border-gray-200 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-6 lg:px-12">
+            <div class="flex justify-between h-20 items-center">
+                
+                <a href="index.html" class="text-xl font-extrabold text-brandDark tracking-tight hover:opacity-80 transition-opacity">
+                    Yeeun Choe
+                </a>
+
+                <ul class="flex space-x-8 items-center text-sm font-semibold text-gray-600 tracking-wide">
+                    
+                    <li class="py-6 relative">
+                        <a href="about.html" class="text-brandDark transition-colors duration-200 after:content-[''] after:absolute after:bottom-4 after:left-0 after:w-full after:h-0.5 after:bg-brandDark">About</a>
+                    </li>
+
+                    <li class="relative group py-6">
+                        <a href="research.html" class="hover:text-brandDark transition-colors duration-200">Research</a>
+                        <ul class="absolute right-0 top-full hidden w-56 bg-white shadow-xl rounded-xl border border-gray-50 py-2 group-hover:block transition-all">
+                            <li><a href="research.html#experiences" class="block px-5 py-2.5 text-sm hover:bg-brandLight hover:text-brandDark transition">Research Experiences</a></li>
+                            <li><a href="research.html#talks" class="block px-5 py-2.5 text-sm hover:bg-brandLight hover:text-brandDark transition">Talks</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="relative group py-6">
+                        <a href="publications.html" class="hover:text-brandDark transition-colors duration-200">Publications</a>
+                        <ul class="absolute right-0 top-full hidden w-40 bg-white shadow-xl rounded-xl border border-gray-50 py-2 group-hover:block transition-all">
+                            <li><a href="publications.html#papers" class="block px-5 py-2.5 text-sm hover:bg-brandLight hover:text-brandDark transition">Papers</a></li>
+                            <li><a href="publications.html#writing" class="block px-5 py-2.5 text-sm hover:bg-brandLight hover:text-brandDark transition">Writing</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="py-6">
+                        <a href="teaching.html" class="hover:text-brandDark transition-colors duration-200">Teaching</a>
+                    </li>
+
+                    <li class="py-6">
+                        <a href="skills.html" class="hover:text-brandDark transition-colors duration-200">Skills</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main class="flex-grow max-w-5xl mx-auto w-full px-6 lg:px-12 pt-32 pb-24">
+        
+        <div class="mb-16 text-center opacity-0 animate-fade-in-up-1">
+            <h1 class="text-4xl md:text-5xl font-extrabold text-gray-900 tracking-tight mb-4">About Me</h1>
+            <div class="w-16 h-1.5 bg-brandDark rounded-full mx-auto opacity-80"></div>
+        </div>
+
+        <div class="mb-20 opacity-0 animate-fade-in-up-1">
+            <div class="bg-white p-8 md:p-12 rounded-3xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow duration-300 relative overflow-hidden flex flex-col md:flex-row items-center gap-12">
+                <div class="absolute top-0 right-0 -mt-4 -mr-4 w-32 h-32 bg-brandLight rounded-full opacity-50 blur-2xl"></div>
+                
+                <!-- 사진 영역: aspect-[4/5] 클래스를 추가하여 4:5 비율 적용 -->
+                <div class="w-full md:w-2/5 flex justify-center z-10 shrink-0">
+                    <img src="./about.jpg" alt="About Yeeun" class="w-64 md:w-80 aspect-[4/5] object-cover rounded-[2rem] shadow-sm border-4 border-white">
+                </div>
+
+                <!-- 텍스트 영역 -->
+                <div class="w-full md:w-3/5 z-10">
+                    <p class="text-lg md:text-xl text-gray-700 leading-loose font-medium">
+                        <span class="text-3xl font-bold text-gray-900">Hello🙌🏻</span><br><br>
+                        I am a <span class="text-brandDark font-extrabold">neuromuscular biomechanics researcher</span> dedicated to <span class="text-brandDark font-extrabold">predicting movement risks and preventing injuries</span>. 
+                        <br>By integrating my background in Sports Medicine with predictive analytics, 
+                        <br>my ultimate goal is to empower individuals to <span class="text-brandDark font-extrabold">move safely and joyfully</span>, ensuring health and happiness in every aspect of human locomotion.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="opacity-0 animate-fade-in-up-2">
+            <h2 class="text-3xl font-extrabold text-gray-900 mb-8 flex items-center relative inline-block">
+                <span class="mr-3 text-4xl">🎓</span> Educations
+                <span class="absolute -bottom-2 left-12 w-1/2 h-1.5 bg-brandLight rounded-full"></span>
+            </h2>
+            
+            <div class="space-y-6">
+                <div class="bg-white p-8 rounded-3xl shadow-sm border border-gray-100 hover:shadow-md hover:border-brandLight transition-all duration-300">
+                    <div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-3">
+                        <h3 class="text-2xl font-bold text-gray-900">
+                            <a href="https://www.yonsei.ac.kr/sites/en_sc/index.do" target="_blank" rel="noopener noreferrer" class="hover:text-brandDark transition-colors duration-200">Yonsei University</a>
+                        </h3>
+                        <span class="text-brandDark font-bold bg-brandLight px-4 py-1.5 rounded-full text-sm mt-3 md:mt-0 tracking-wide">Mar 2024 - Present</span>
+                    </div>
+                    <p class="text-xl text-brandDark font-semibold mb-2">
+                        Master of <a href="https://ped.yonsei.ac.kr/" target="_blank" rel="noopener noreferrer" class="underline hover:text-brandAccent transition-colors duration-200">Physical Education</a> in Biomechanics
+                    </p>
+                    
+                    <p class="text-md text-gray-600 mb-4 font-medium flex items-center">
+                        <i class="fas fa-microscope mr-2 text-gray-400"></i>
+                        <a href="https://ultrasuperpower.weebly.com/" target="_blank" rel="noopener noreferrer" class="hover:text-brandDark hover:underline transition-colors duration-200">
+                            Neuromuscular Mechanics Laboratory
+                        </a>
+                    </p>
+
+                    <div class="bg-gray-50 p-4 rounded-xl border border-gray-100 mb-3">
+                        <p class="text-gray-700 text-sm md:text-base font-medium">
+                            <span class="font-bold text-gray-900 mr-2">Thesis:</span> 
+                            "Neuromuscular acute response to the plantar flexor muscle-tendon unit to unanticipated ground-level perturbation during landing"
+                        </p>
+                    </div>
+                    <p class="text-gray-500 text-sm flex items-center mt-2">
+                        <i class="fas fa-map-marker-alt mr-2 text-brandDark"></i> Seoul, South Korea
+                    </p>
+                </div>
+
+                <div class="bg-white p-8 rounded-3xl shadow-sm border border-gray-100 hover:shadow-md hover:border-brandLight transition-all duration-300">
+                    <div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-3">
+                        <h3 class="text-2xl font-bold text-gray-900">
+                            <a href="https://www.cha.ac.kr/" target="_blank" rel="noopener noreferrer" class="hover:text-brandDark transition-colors duration-200">CHA University</a>
+                        </h3>
+                        <span class="text-brandDark font-bold bg-brandLight px-4 py-1.5 rounded-full text-sm mt-3 md:mt-0 tracking-wide">Mar 2019 - Feb 2023</span>
+                    </div>
+                    <p class="text-xl text-brandDark font-semibold mb-3">
+                        Bachelor of Science in <a href="https://sports.cha.ac.kr/" target="_blank" rel="noopener noreferrer" class="underline hover:text-brandAccent transition-colors duration-200">Sports Medicine</a>
+                    </p>
+                    
+                    <div class="my-5">
+                        <img src="./cha.jpg" alt="CHA University Graduation" class="w-full md:w-3/4 max-w-lg rounded-2xl shadow-sm border border-gray-100 object-cover">
+                    </div>
+
+                    <p class="text-gray-500 text-sm flex items-center mt-2">
+                        <i class="fas fa-map-marker-alt mr-2 text-brandDark"></i> Pocheon, South Korea
+                    </p>
+                </div>
+            </div>
+        </div>
+        
+    </main>
+
+</body>
+</html>
