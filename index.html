@@ -5,16 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Yeeun Choe - Portfolio</title>
     
-    <!-- Google Fonts (Inter) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     
-    <!-- Tailwind CSS & FontAwesome -->
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
-    <!-- 커스텀 색상 및 등장(Fade-in) 애니메이션 설정 -->
     <script>
         tailwind.config = {
             theme: {
@@ -37,6 +34,7 @@
                         'fade-in-up-3': 'fadeInUp 0.6s ease-out 0.3s forwards',
                         'fade-in-up-4': 'fadeInUp 0.6s ease-out 0.45s forwards',
                         'fade-in-up-5': 'fadeInUp 0.6s ease-out 0.6s forwards',
+                        'fade-in-up-6': 'fadeInUp 0.6s ease-out 0.75s forwards',
                     }
                 }
             }
@@ -45,49 +43,32 @@
 </head>
 <body class="bg-[#F8FAFC] text-gray-800 antialiased selection:bg-brandLight selection:text-brandDark">
 
-    <!-- 상단 네비게이션 바 -->
     <nav class="fixed w-full top-0 bg-[#F8FAFC]/90 backdrop-blur-md z-50 border-b border-gray-200 transition-all duration-300">
         <div class="max-w-7xl mx-auto px-6 lg:px-12">
-            <!-- justify-between으로 좌측(이름)과 우측(메뉴)을 양끝으로 배치 -->
             <div class="flex justify-between h-20 items-center">
                 
-                <!-- 좌측 상단: 이름 고정 -->
                 <a href="index.html" class="text-xl font-extrabold text-brandDark tracking-tight hover:opacity-80 transition-opacity">
                     Yeeun Choe
                 </a>
 
-                <!-- 우측 상단: 메뉴 -->
                 <ul class="flex space-x-8 items-center text-sm font-semibold text-gray-600 tracking-wide">
                     
-                    <!-- 1. About -->
                     <li class="py-6">
                         <a href="about.html" class="hover:text-brandDark transition-colors duration-200">About</a>
                     </li>
 
-                    <!-- 2. Research -->
-                    <li class="relative group py-6">
+                    <li class="py-6">
                         <a href="research.html" class="hover:text-brandDark transition-colors duration-200">Research</a>
-                        <ul class="absolute right-0 top-full hidden w-56 bg-white shadow-xl rounded-xl border border-gray-50 py-2 group-hover:block transition-all">
-                            <li><a href="research.html#experiences" class="block px-5 py-2.5 text-sm hover:bg-brandLight hover:text-brandDark transition">Research Experiences</a></li>
-                            <li><a href="research.html#talks" class="block px-5 py-2.5 text-sm hover:bg-brandLight hover:text-brandDark transition">Talks</a></li>
-                        </ul>
                     </li>
 
-                    <!-- 3. Publications -->
                     <li class="relative group py-6">
                         <a href="publications.html" class="hover:text-brandDark transition-colors duration-200">Publications</a>
-                        <ul class="absolute right-0 top-full hidden w-40 bg-white shadow-xl rounded-xl border border-gray-50 py-2 group-hover:block transition-all">
-                            <li><a href="publications.html#papers" class="block px-5 py-2.5 text-sm hover:bg-brandLight hover:text-brandDark transition">Papers</a></li>
-                            <li><a href="publications.html#writing" class="block px-5 py-2.5 text-sm hover:bg-brandLight hover:text-brandDark transition">Writing</a></li>
+                        <ul class="absolute right-0 top-full hidden w-48 bg-white shadow-xl rounded-xl border border-gray-50 py-2 group-hover:block transition-all">
+                            <li><a href="publications.html#journal-articles" class="block px-5 py-2.5 text-sm hover:bg-brandLight hover:text-brandDark transition">Journal Articles</a></li>
+                            <li><a href="publications.html#conference-papers" class="block px-5 py-2.5 text-sm hover:bg-brandLight hover:text-brandDark transition">Conference Papers</a></li>
                         </ul>
                     </li>
 
-                    <!-- 4. Teaching -->
-                    <li class="py-6">
-                        <a href="teaching.html" class="hover:text-brandDark transition-colors duration-200">Teaching</a>
-                    </li>
-
-                    <!-- 5. Skills -->
                     <li class="py-6">
                         <a href="skills.html" class="hover:text-brandDark transition-colors duration-200">Skills</a>
                     </li>
@@ -96,27 +77,22 @@
         </div>
     </nav>
 
-    <!-- 메인 화면 -->
     <section class="min-h-screen flex flex-col md:flex-row pt-20 bg-[#F8FAFC]">
         
-        <!-- 좌측: 프로필 및 연락처 영역 -->
         <div class="w-full md:w-1/2 flex flex-col items-center justify-center p-12 min-h-[50vh] relative z-10">
             
-            <!-- 프로필 사진 -->
             <div class="relative w-64 h-64 mb-12 group"> 
                 <div class="absolute inset-0 bg-brandLight rounded-[2rem] translate-x-4 translate-y-4 transition-all duration-500 ease-in-out group-hover:translate-x-6 group-hover:translate-y-6 group-hover:rotate-3 -z-10"></div>
                 <img src="./yeeun.jpg" alt="Yeeun Choe" class="w-full h-full object-cover rounded-[2rem] shadow-sm border-4 border-white relative z-10 transition-transform duration-500 group-hover:scale-[1.02]">
             </div>
             
             <h1 class="text-4xl md:text-5xl font-extrabold text-gray-900 mb-2 tracking-tight">Yeeun Choe</h1>
-            <p class="text-brandDark text-sm font-bold uppercase tracking-[0.2em] mb-8 opacity-80">M.S. Student in Biomechanics</p>
+            <p class="text-brandDark text-sm font-bold uppercase tracking-[0.2em] mb-8 opacity-80 text-center">M.S. Student in Biomechanics</p>
             
-            <!-- CV 버튼 -->
             <a href="./CV.pdf" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center px-10 py-3 mb-10 text-sm font-bold text-white transition-all duration-300 bg-brandDark rounded-full hover:bg-brandAccent hover:shadow-lg hover:-translate-y-0.5 focus:outline-none relative z-20">
                 <span class="tracking-widest uppercase">cv</span>
             </a>
             
-            <!-- 연락처 아이콘 -->
             <div class="flex space-x-6 text-gray-400 relative z-20">
                 <a href="mailto:yeeunchoe0904@gmail.com" class="hover:text-brandDark hover:-translate-y-1 transition-all duration-300 text-2xl"><i class="fas fa-envelope"></i></a>
                 <a href="https://www.linkedin.com/in/yeeun-choe" target="_blank" rel="noopener noreferrer" class="hover:text-brandDark hover:-translate-y-1 transition-all duration-300 text-2xl"><i class="fab fa-linkedin"></i></a>
@@ -125,7 +101,6 @@
             </div>
         </div>
 
-        <!-- 우측: 슬로건 & 키워드 영역 -->
         <div class="w-full md:w-1/2 flex items-center justify-center p-12 md:p-24 min-h-[50vh] relative overflow-hidden">
             
             <div class="absolute inset-0 opacity-[0.04]" style="background-image: radial-gradient(#3A634B 1.5px, transparent 1.5px); background-size: 24px 24px;"></div>
@@ -136,7 +111,6 @@
 
             <div class="max-w-xl text-center relative z-10 flex flex-col items-center">
                 
-                <!-- 상단 녹색 바 -->
                 <div class="w-12 h-1.5 bg-brandDark rounded-full mb-10 opacity-80"></div>
 
                 <h2 class="text-4xl md:text-5xl font-extrabold text-gray-900 mb-12 leading-tight tracking-tight">
@@ -144,16 +118,15 @@
                     <span class="text-transparent bg-clip-text bg-gradient-to-r from-brandDark to-[#6ba685]">through in-vivo data</span>
                 </h2>
                 
-                <!-- 핵심 키워드 -->
                 <div class="flex flex-wrap justify-center gap-3"> 
                     <span class="opacity-0 animate-fade-in-up-1 px-4 py-2 bg-white border border-brandLight text-brandDark rounded-lg text-sm font-bold tracking-wider shadow-md hover:shadow-lg transition-shadow">Biomechanics</span>
-                    <span class="opacity-0 animate-fade-in-up-2 px-4 py-2 bg-white border border-brandLight text-brandDark rounded-lg text-sm font-bold tracking-wider shadow-md hover:shadow-lg transition-shadow">Neuromuscular Control</span>
-                    <span class="opacity-0 animate-fade-in-up-3 px-4 py-2 bg-white border border-brandLight text-brandDark rounded-lg text-sm font-bold tracking-wider shadow-md hover:shadow-lg transition-shadow">Muscle-Tendon Mechanics</span>
-                    <span class="opacity-0 animate-fade-in-up-4 px-4 py-2 bg-white border border-brandLight text-brandDark rounded-lg text-sm font-bold tracking-wider shadow-md hover:shadow-lg transition-shadow">Human Locomotion</span>
-                    <span class="opacity-0 animate-fade-in-up-5 px-4 py-2 bg-white border border-brandLight text-brandDark rounded-lg text-sm font-bold tracking-wider shadow-md hover:shadow-lg transition-shadow">Injury Prediction</span>
+                    <span class="opacity-0 animate-fade-in-up-2 px-4 py-2 bg-white border border-brandLight text-brandDark rounded-lg text-sm font-bold tracking-wider shadow-md hover:shadow-lg transition-shadow">Human Locomotion</span>
+                    <span class="opacity-0 animate-fade-in-up-3 px-4 py-2 bg-white border border-brandLight text-brandDark rounded-lg text-sm font-bold tracking-wider shadow-md hover:shadow-lg transition-shadow">Dynamic Stability & Perturbation Response</span>
+                    <span class="opacity-0 animate-fade-in-up-4 px-4 py-2 bg-white border border-brandLight text-brandDark rounded-lg text-sm font-bold tracking-wider shadow-md hover:shadow-lg transition-shadow">Neuromuscular Control</span>
+                    <span class="opacity-0 animate-fade-in-up-5 px-4 py-2 bg-white border border-brandLight text-brandDark rounded-lg text-sm font-bold tracking-wider shadow-md hover:shadow-lg transition-shadow">Movement Performance</span>
+                    <span class="opacity-0 animate-fade-in-up-6 px-4 py-2 bg-white border border-brandLight text-brandDark rounded-lg text-sm font-bold tracking-wider shadow-md hover:shadow-lg transition-shadow">Injury Risk Prediction</span>
                 </div>
                 
-                <!-- 하단 녹색 바 (상단과 색상 통일) -->
                 <div class="w-12 h-1.5 bg-brandDark rounded-full mt-10 opacity-80"></div>
             </div>
         </div>

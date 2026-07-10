@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Research - Yeeun Choe</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { sans: ['Inter', 'sans-serif'] },
+                    colors: {
+                        brandLight: '#E8F1EC',
+                        brandDark: '#3A634B',
+                        brandAccent: '#2C4C38',
+                        confAccent: '#AD8A3B',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        .reveal { opacity: 0; transform: translateY(16px); transition: opacity 0.6s ease, transform 0.6s ease; }
+        .reveal.visible { opacity: 1; transform: translateY(0); }
+
+        .toggle-content { display: none; }
+        .toggle-content.open { display: block; }
+        .toggle-icon { transition: transform 0.2s ease; }
+        .toggle-icon.open { transform: rotate(180deg); }
+    </style>
+</head>
+<body class="bg-[#F8FAFC] text-gray-800 antialiased selection:bg-brandLight selection:text-brandDark min-h-screen flex flex-col">
+
+<!-- ─── NAV ─── -->
+<nav class="fixed w-full top-0 bg-[#F8FAFC]/90 backdrop-blur-md z-50 border-b border-gray-200">
+    <div class="max-w-7xl mx-auto px-6 lg:px-12">
+        <div class="flex justify-between h-20 items-center">
+            <a href="index.html" class="text-xl font-extrabold text-brandDark tracking-tight hover:opacity-80 transition-opacity">Yeeun Choe</a>
+            <ul class="flex space-x-8 items-center text-sm font-semibold text-gray-600 tracking-wide">
+                <li class="py-6"><a href="about.html" class="hover:text-brandDark transition-colors duration-200">About</a></li>
+                <li class="py-6 relative">
+                    <a href="research.html" class="text-brandDark transition-colors duration-200 after:content-[''] after:absolute after:bottom-4 after:left-0 after:w-full after:h-0.5 after:bg-brandDark">Research</a>
+                </li>
+                <li class="relative group py-6">
+                    <a href="publications.html" class="hover:text-brandDark transition-colors duration-200">Publications</a>
+                    <ul class="absolute right-0 top-full hidden w-48 bg-white shadow-xl rounded-xl border border-gray-50 py-2 group-hover:block">
+                        <li><a href="publications.html#journal-articles" class="block px-5 py-2.5 text-sm hover:bg-brandLight hover:text-brandDark transition">Journal Articles</a></li>
+                        <li><a href="publications.html#conference-papers" class="block px-5 py-2.5 text-sm hover:bg-brandLight hover:text-brandDark transition">Conference Papers</a></li>
+                    </ul>
+                </li>
+                <li class="py-6"><a href="skills.html" class="hover:text-brandDark transition-colors duration-200">Skills</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<main class="flex-grow pt-20">
+
+    <!-- ══════════ SECTION 1 · RESEARCH INTERESTS ══════════ -->
+    <section id="interests" class="pt-16 pb-14 relative overflow-hidden">
+        <div class="absolute inset-0 opacity-[0.04] pointer-events-none" style="background-image: radial-gradient(#3A634B 1.5px, transparent 1.5px); background-size: 24px 24px;"></div>
+        <div class="absolute -top-24 -right-24 w-72 h-72 rounded-full bg-brandLight opacity-40 blur-3xl pointer-events-none"></div>
+        <div class="absolute top-6 left-0 text-brandLight opacity-40 text-[7rem] -z-0 -rotate-6 pointer-events-none leading-none select-none">
+            <i class="fas fa-quote-left"></i>
+        </div>
+
+        <div class="max-w-4xl mx-auto px-6 lg:px-12 relative">
+            <div class="reveal">
+                <!-- Title: Centered with green bar -->
+                <div class="mb-12 text-center">
+                    <h1 class="text-4xl md:text-5xl font-extrabold text-gray-900 tracking-tight mb-4">Research Interests</h1>
+                    <div class="w-16 h-1.5 bg-brandDark rounded-full mx-auto opacity-80"></div>
+                </div>
+
+                <!-- 1. Narrative -->
+                <div class="text-sm md:text-base text-gray-600 leading-relaxed max-w-3xl mx-auto mb-8 space-y-4">
+                    <p>
+                        My research aims to predict and prevent <span class="text-brandDark font-extrabold">locomotion injuries</span> early by evaluating established biomechanical risk indicators at the individual level.
+                    </p>
+                    <p>
+                        As a research assistant, I investigated <span class="text-brandDark font-extrabold">kinematics, kinetics, neuromuscular mechanics, and passive mechanics</span> across a wide range of age groups, from children to older adults. My experimental experience spans various motor tasks, from fundamental broad jumps to complex paradigms like dual-task walking and repeated hopping under <span class="text-brandDark font-extrabold">perturbations</span>.
+                    </p>
+                    <p>
+                        Using statistical comparison methods based on group averages to examine differences across individuals, I kept discovering that even individuals exposed to identical demands showed highly variable responses. This experience convinced me that injury risk cannot be fully explained by group averages alone. I aim to analyze this complexity of human movement using <span class="text-brandDark font-extrabold">machine learning</span> alongside traditional statistics, representing each person's risk profile in a nonlinear, individualized form — ultimately building <span class="text-brandDark font-extrabold">predictive tools</span> that can intervene before injury occurs.
+                    </p>
+                </div>
+
+                <!-- 2. Core Focus Areas -->
+                <div class="bg-white rounded-2xl border border-gray-100 shadow-sm max-w-3xl mx-auto mb-8 overflow-hidden">
+                    <div class="h-1.5 w-full bg-gradient-to-r from-brandDark via-[#6ba685] to-brandLight"></div>
+                    <div class="p-6 md:p-8">
+                        <h3 class="text-xs font-bold uppercase tracking-widest text-brandDark mb-5">Core Focus Areas</h3>
+                        <div class="text-sm md:text-base text-gray-600 leading-relaxed space-y-4">
+                            <p class="flex items-start gap-3">
+                                <span class="font-bold text-brandDark mt-0.5">1)</span>
+                                <span>Investigating the neuromuscular and biomechanical mechanisms underlying <span class="text-brandDark font-extrabold">human locomotion and performance</span>.</span>
+                            </p>
+                            <p class="flex items-start gap-3">
+                                <span class="font-bold text-brandDark mt-0.5">2)</span>
+                                <span>Understanding <span class="text-brandDark font-extrabold">individual differences</span> in how these neuromechanical responses evolve across repeated exposures over time.</span>
+                            </p>
+                            <p class="flex items-start gap-3">
+                                <span class="font-bold text-brandDark mt-0.5">3)</span>
+                                <span>Developing interpretable, <span class="text-brandDark font-extrabold">machine-learning-based models</span> that translate these mechanisms into individualized injury risk prediction — with the long-term goal of building field-ready, wearable-based screening tools.</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Keyword tags -->
+                <div class="flex flex-wrap justify-center gap-3 max-w-3xl mx-auto">
+                    <span class="px-4 py-2 bg-white border border-brandLight text-brandDark rounded-lg text-sm font-bold tracking-wider shadow-md hover:shadow-lg transition-shadow">Biomechanics</span>
+                    <span class="px-4 py-2 bg-white border border-brandLight text-brandDark rounded-lg text-sm font-bold tracking-wider shadow-md hover:shadow-lg transition-shadow">Human Locomotion</span>
+                    <span class="px-4 py-2 bg-white border border-brandLight text-brandDark rounded-lg text-sm font-bold tracking-wider shadow-md hover:shadow-lg transition-shadow">Dynamic Stability &amp; Perturbation Response</span>
+                    <span class="px-4 py-2 bg-white border border-brandLight text-brandDark rounded-lg text-sm font-bold tracking-wider shadow-md hover:shadow-lg transition-shadow">Neuromuscular Control</span>
+                    <span class="px-4 py-2 bg-white border border-brandLight text-brandDark rounded-lg text-sm font-bold tracking-wider shadow-md hover:shadow-lg transition-shadow">Movement Performance</span>
+                    <span class="px-4 py-2 bg-white border border-brandLight text-brandDark rounded-lg text-sm font-bold tracking-wider shadow-md hover:shadow-lg transition-shadow">Injury Risk Prediction</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ══════════ SECTION 2 · RESEARCH PROGRAMS ══════════ -->
+    <section id="programs" class="py-14 border-t border-gray-100 mt-6">
+        <div class="max-w-4xl mx-auto px-6 lg:px-12">
+
+            <div class="reveal mb-6">
+                <h2 class="text-3xl font-extrabold text-gray-900 mb-8 flex items-center relative inline-block">
+                    <span class="mr-3 text-4xl">🔬</span> Research Programs
+                    <span class="absolute -bottom-2 left-12 w-1/2 h-1.5 bg-brandLight rounded-full"></span>
+                </h2>
+                <!-- 수정한 멘트 -->
+                <p class="text-sm md:text-base text-gray-600 leading-relaxed mb-4">
+                    My work is organized into four research programs. Click any topic below to view related works, and please refer to the <a href="publications.html" class="font-semibold text-brandDark hover:underline transition-colors">Publications</a> page for full details.
+                </p>
+                <div class="flex flex-wrap items-center gap-x-6 gap-y-2 text-xs text-gray-500">
+                    <span class="flex items-center gap-2"><span class="w-2.5 h-2.5 rounded-full bg-brandDark inline-block"></span>Peer-reviewed publication</span>
+                    <span class="flex items-center gap-2"><span class="w-2.5 h-2.5 rounded-full bg-confAccent inline-block"></span>Conference presentation</span>
+                    <span class="flex items-center gap-2"><span class="w-2.5 h-2.5 rounded-full bg-gray-300 inline-block"></span>Thesis (in progress)</span>
+                </div>
+            </div>
+
+            <div class="reveal bg-white rounded-3xl border border-gray-100 shadow-sm p-6 md:p-8">
+                <div class="flex items-center justify-end mb-2">
+                    <div class="flex gap-2">
+                        <button onclick="expandAll()" class="text-xs font-semibold text-gray-600 border border-gray-200 rounded-full px-3 py-1.5 hover:bg-brandLight hover:text-brandDark hover:border-brandLight transition-colors duration-200">Expand all</button>
+                        <button onclick="collapseAll()" class="text-xs font-semibold text-gray-600 border border-gray-200 rounded-full px-3 py-1.5 hover:bg-brandLight hover:text-brandDark hover:border-brandLight transition-colors duration-200">Collapse all</button>
+                    </div>
+                </div>
+
+                <!-- Program 01 -->
+                <div class="border-b border-gray-100">
+                    <button onclick="toggleProgram('pA')" class="w-full flex items-center gap-4 py-5 text-left group">
+                        <span class="shrink-0 w-7 h-7 flex items-center justify-center rounded-lg bg-brandLight text-brandDark text-xs font-extrabold">01</span>
+                        <span class="flex-1 text-sm font-bold text-gray-800 group-hover:text-brandDark transition-colors">Dynamic Stability &amp; Neuromechanical Responses to Perturbation</span>
+                        <i id="pA-icon" class="fas fa-chevron-down text-gray-300 text-xs toggle-icon open"></i>
+                    </button>
+                    <div id="pA" class="toggle-content open pb-6 pl-11">
+                        <ul class="space-y-4">
+                            <li class="flex items-start gap-3">
+                                <span class="w-2.5 h-2.5 rounded-full bg-gray-300 mt-1.5 shrink-0"></span>
+                                <div>
+                                    <p class="text-sm text-gray-700 leading-snug">Neuromuscular response of the plantar flexor muscle-tendon unit to unanticipated ground-level perturbation during repeated hopping</p>
+                                    <p class="text-xs text-gray-400 mt-0.5">M.S. Thesis · Yonsei University</p>
+                                </div>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <span class="w-2.5 h-2.5 rounded-full bg-confAccent mt-1.5 shrink-0"></span>
+                                <div>
+                                    <p class="text-sm text-gray-700 leading-snug">Effect of Predictability of Ground Height Perturbations on Neuromechanical Responses of Lower Extremity Joints During Hopping: A Pilot Study</p>
+                                    <p class="text-xs text-gray-400 mt-0.5">KSBB International Conference · 2025</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Program 02 -->
+                <div class="border-b border-gray-100">
+                    <button onclick="toggleProgram('pB')" class="w-full flex items-center gap-4 py-5 text-left group">
+                        <span class="shrink-0 w-7 h-7 flex items-center justify-center rounded-lg bg-brandLight text-brandDark text-xs font-extrabold">02</span>
+                        <span class="flex-1 text-sm font-bold text-gray-800 group-hover:text-brandDark transition-colors">Dual-Task Cognition, Gait &amp; Aging</span>
+                        <i id="pB-icon" class="fas fa-chevron-down text-gray-300 text-xs toggle-icon open"></i>
+                    </button>
+                    <div id="pB" class="toggle-content open pb-6 pl-11">
+                        <ul class="space-y-4">
+                            <li class="flex items-start gap-3">
+                                <span class="w-2.5 h-2.5 rounded-full bg-confAccent mt-1.5 shrink-0"></span>
+                                <div>
+                                    <p class="text-sm text-gray-700 leading-snug">Effects of Dual Tasks on 30-Minute Treadmill Walking: Pilot Test</p>
+                                    <p class="text-xs text-gray-400 mt-0.5">KSBB Fall Conference · 2024</p>
+                                </div>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <span class="w-2.5 h-2.5 rounded-full bg-confAccent mt-1.5 shrink-0"></span>
+                                <div>
+                                    <p class="text-sm text-gray-700 leading-snug">The Impact of Dual-Tasking on Visual Attention and Reaction Time in Older Pedestrians</p>
+                                    <p class="text-xs text-gray-400 mt-0.5">The 92nd Conference of Korean Society of Transportation · 2025</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Program 03 -->
+                <div class="border-b border-gray-100">
+                    <button onclick="toggleProgram('pC')" class="w-full flex items-center gap-4 py-5 text-left group">
+                        <span class="shrink-0 w-7 h-7 flex items-center justify-center rounded-lg bg-brandLight text-brandDark text-xs font-extrabold">03</span>
+                        <span class="flex-1 text-sm font-bold text-gray-800 group-hover:text-brandDark transition-colors">Psychosocial &amp; Behavioral Correlates of Physical Activity</span>
+                        <i id="pC-icon" class="fas fa-chevron-down text-gray-300 text-xs toggle-icon open"></i>
+                    </button>
+                    <div id="pC" class="toggle-content open pb-6 pl-11">
+                        <ul class="space-y-4">
+                            <li class="flex items-start gap-3">
+                                <span class="w-2.5 h-2.5 rounded-full bg-brandDark mt-1.5 shrink-0"></span>
+                                <div>
+                                    <p class="text-sm text-gray-700 leading-snug">Influence of Subjective Health Status on Positive Psychological Capital in Middle-Aged Adults</p>
+                                    <p class="text-xs text-gray-400 mt-0.5">Journal of Wellness · 2025</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Program 04 -->
+                <div>
+                    <button onclick="toggleProgram('pD')" class="w-full flex items-center gap-4 py-5 text-left group">
+                        <span class="shrink-0 w-7 h-7 flex items-center justify-center rounded-lg bg-brandLight text-brandDark text-xs font-extrabold">04</span>
+                        <span class="flex-1 text-sm font-bold text-gray-800 group-hover:text-brandDark transition-colors">Muscle-Tendon Mechanics &amp; Movement Performance <span class="font-medium text-gray-400">(Lab Collaborations)</span></span>
+                        <i id="pD-icon" class="fas fa-chevron-down text-gray-300 text-xs toggle-icon open"></i>
+                    </button>
+                    <div id="pD" class="toggle-content open pb-6 pl-11">
+                        <ul class="space-y-4">
+                            <li class="flex items-start gap-3">
+                                <span class="w-2.5 h-2.5 rounded-full bg-brandDark mt-1.5 shrink-0"></span>
+                                <div>
+                                    <p class="text-sm text-gray-700 leading-snug">Modulation of stretch activation influences the stretch-shortening cycle effect in in vivo human knee extensors <span class="text-gray-400 font-normal">(as research assistant)</span></p>
+                                    <p class="text-xs text-gray-400 mt-0.5">Physiological Reports · 2025</p>
+                                </div>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <span class="w-2.5 h-2.5 rounded-full bg-brandDark mt-1.5 shrink-0"></span>
+                                <div>
+                                    <p class="text-sm text-gray-700 leading-snug">Lower limb muscle activity during standing long jump performance in children with idiopathic toe walking <span class="text-gray-400 font-normal">(as research assistant)</span></p>
+                                    <p class="text-xs text-gray-400 mt-0.5">The Korean Journal of Physical Education · 2025</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+</main>
+
+<!-- Scroll to top -->
+<button id="scrollToTopBtn" class="fixed bottom-8 right-8 w-12 h-12 bg-brandDark text-white rounded-full shadow-lg flex items-center justify-center text-lg hover:bg-brandAccent hover:-translate-y-1 transition-all duration-300 z-50 opacity-0 pointer-events-none">
+    <i class="fas fa-arrow-up"></i>
+</button>
+
+<script>
+    function toggleProgram(id) {
+        const content = document.getElementById(id);
+        const icon = document.getElementById(id + '-icon');
+        const isOpen = content.classList.contains('open');
+        content.classList.toggle('open', !isOpen);
+        icon.classList.toggle('open', !isOpen);
+    }
+
+    function expandAll() {
+        document.querySelectorAll('.toggle-content').forEach(el => el.classList.add('open'));
+        document.querySelectorAll('.toggle-icon').forEach(el => el.classList.add('open'));
+    }
+
+    function collapseAll() {
+        document.querySelectorAll('.toggle-content').forEach(el => el.classList.remove('open'));
+        document.querySelectorAll('.toggle-icon').forEach(el => el.classList.remove('open'));
+    }
+
+    // ── Scroll to top ──
+    const topBtn = document.getElementById('scrollToTopBtn');
+    window.addEventListener('scroll', () => {
+        topBtn.classList.toggle('opacity-0', window.scrollY <= 300);
+        topBtn.classList.toggle('pointer-events-none', window.scrollY <= 300);
+        topBtn.classList.toggle('opacity-100', window.scrollY > 300);
+    });
+    topBtn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+
+    // ── Scroll reveal ──
+    const reveals = document.querySelectorAll('.reveal');
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+    }, { threshold: 0.1 });
+    reveals.forEach(el => observer.observe(el));
+</script>
+</body>
+</html>

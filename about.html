@@ -36,43 +36,37 @@
             }
         }
     </script>
+
+    <style>
+        html { scroll-behavior: smooth; }
+        /* navbar 높이(80px)만큼 앵커 오프셋 보정 */
+        .section-anchor {
+            scroll-margin-top: 100px;
+        }
+    </style>
 </head>
 <body class="bg-[#F8FAFC] text-gray-800 antialiased selection:bg-brandLight selection:text-brandDark min-h-screen flex flex-col">
 
     <nav class="fixed w-full top-0 bg-[#F8FAFC]/90 backdrop-blur-md z-50 border-b border-gray-200 transition-all duration-300">
         <div class="max-w-7xl mx-auto px-6 lg:px-12">
             <div class="flex justify-between h-20 items-center">
-                
                 <a href="index.html" class="text-xl font-extrabold text-brandDark tracking-tight hover:opacity-80 transition-opacity">
                     Yeeun Choe
                 </a>
-
                 <ul class="flex space-x-8 items-center text-sm font-semibold text-gray-600 tracking-wide">
-                    
                     <li class="py-6 relative">
                         <a href="about.html" class="text-brandDark transition-colors duration-200 after:content-[''] after:absolute after:bottom-4 after:left-0 after:w-full after:h-0.5 after:bg-brandDark">About</a>
                     </li>
-
-                    <li class="relative group py-6">
+                    <li class="py-6">
                         <a href="research.html" class="hover:text-brandDark transition-colors duration-200">Research</a>
-                        <ul class="absolute right-0 top-full hidden w-56 bg-white shadow-xl rounded-xl border border-gray-50 py-2 group-hover:block transition-all">
-                            <li><a href="research.html#experiences" class="block px-5 py-2.5 text-sm hover:bg-brandLight hover:text-brandDark transition">Research Experiences</a></li>
-                            <li><a href="research.html#talks" class="block px-5 py-2.5 text-sm hover:bg-brandLight hover:text-brandDark transition">Talks</a></li>
-                        </ul>
                     </li>
-
                     <li class="relative group py-6">
                         <a href="publications.html" class="hover:text-brandDark transition-colors duration-200">Publications</a>
-                        <ul class="absolute right-0 top-full hidden w-40 bg-white shadow-xl rounded-xl border border-gray-50 py-2 group-hover:block transition-all">
-                            <li><a href="publications.html#papers" class="block px-5 py-2.5 text-sm hover:bg-brandLight hover:text-brandDark transition">Papers</a></li>
-                            <li><a href="publications.html#writing" class="block px-5 py-2.5 text-sm hover:bg-brandLight hover:text-brandDark transition">Writing</a></li>
+                        <ul class="absolute right-0 top-full hidden w-48 bg-white shadow-xl rounded-xl border border-gray-50 py-2 group-hover:block transition-all">
+                            <li><a href="publications.html#journal-articles" class="block px-5 py-2.5 text-sm hover:bg-brandLight hover:text-brandDark transition">Journal Articles</a></li>
+                            <li><a href="publications.html#conference-papers" class="block px-5 py-2.5 text-sm hover:bg-brandLight hover:text-brandDark transition">Conference Papers</a></li>
                         </ul>
                     </li>
-
-                    <li class="py-6">
-                        <a href="teaching.html" class="hover:text-brandDark transition-colors duration-200">Teaching</a>
-                    </li>
-
                     <li class="py-6">
                         <a href="skills.html" class="hover:text-brandDark transition-colors duration-200">Skills</a>
                     </li>
@@ -82,39 +76,63 @@
     </nav>
 
     <main class="flex-grow max-w-5xl mx-auto w-full px-6 lg:px-12 pt-32 pb-24">
-        
+
+        <!-- Page Title -->
         <div class="mb-16 text-center opacity-0 animate-fade-in-up-1">
             <h1 class="text-4xl md:text-5xl font-extrabold text-gray-900 tracking-tight mb-4">About Me</h1>
             <div class="w-16 h-1.5 bg-brandDark rounded-full mx-auto opacity-80"></div>
         </div>
 
-        <div class="mb-20 opacity-0 animate-fade-in-up-1">
+        <!-- Intro Card -->
+        <div class="mb-12 opacity-0 animate-fade-in-up-1">
             <div class="bg-white p-8 md:p-12 rounded-3xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow duration-300 relative overflow-hidden flex flex-col md:flex-row items-center gap-12">
                 <div class="absolute top-0 right-0 -mt-4 -mr-4 w-32 h-32 bg-brandLight rounded-full opacity-50 blur-2xl"></div>
-                
-                <!-- 사진 영역: aspect-[4/5] 클래스를 추가하여 4:5 비율 적용 -->
                 <div class="w-full md:w-2/5 flex justify-center z-10 shrink-0">
                     <img src="./about.jpg" alt="About Yeeun" class="w-64 md:w-80 aspect-[4/5] object-cover rounded-[2rem] shadow-sm border-4 border-white">
                 </div>
-
-                <!-- 텍스트 영역 -->
                 <div class="w-full md:w-3/5 z-10">
                     <p class="text-lg md:text-xl text-gray-700 leading-loose font-medium">
-                        <span class="text-3xl font-bold text-gray-900">Hello🙌🏻</span><br><br>
-                        I am a <span class="text-brandDark font-extrabold">neuromuscular biomechanics researcher</span> dedicated to <span class="text-brandDark font-extrabold">predicting movement risks and preventing injuries</span>. 
-                        <br>By integrating my background in Sports Medicine with predictive analytics, 
-                        <br>my ultimate goal is to empower individuals to <span class="text-brandDark font-extrabold">move safely and joyfully</span>, ensuring health and happiness in every aspect of human locomotion.
+                        <span class="text-3xl font-bold text-gray-900">Hello 🙌🏻</span><br><br>
+                        I'm <span class="text-brandDark font-extrabold">Yeeun Choe</span> — pronounced <em>Yeh-eun</em>, or feel free to call me <span class="text-brandDark font-extrabold">Yennie</span>!
+                        <br><br>
+                        With a foundation in <span class="text-brandDark font-extrabold">Sports Medicine</span> and graduate training in <span class="text-brandDark font-extrabold">Biomechanics</span>, I've grown deeply curious about how the human body moves and adapts. My research focuses on understanding movement by integrating <span class="text-brandDark font-extrabold">neuromuscular responses</span> and <span class="text-brandDark font-extrabold">mechanical behaviors</span> — exploring how the nervous system and musculoskeletal structures interact to produce and regulate human motion.
+                        <br><br>
+                        By bridging these perspectives, my ultimate goal is to develop evidence-based insights for <span class="text-brandDark font-extrabold">predicting and preventing musculoskeletal injuries</span>, helping people move with confidence and resilience.
                     </p>
                 </div>
             </div>
         </div>
 
-        <div class="opacity-0 animate-fade-in-up-2">
+        <!-- Table of Contents -->
+        <div class="mb-20 opacity-0 animate-fade-in-up-2">
+            <div class="bg-white rounded-2xl shadow-sm border border-gray-100 p-6 md:p-8">
+                <p class="text-xs font-bold text-gray-400 uppercase tracking-widest mb-4">On this page</p>
+                <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+                    <a href="#educations" class="group flex items-center gap-4 p-4 rounded-xl border border-gray-100 hover:border-brandLight hover:bg-brandLight/40 transition-all duration-200">
+                        <span class="text-2xl">🎓</span>
+                        <p class="text-sm font-bold text-gray-900 group-hover:text-brandDark transition-colors">Educations</p>
+                        <i class="fas fa-arrow-right text-xs text-gray-300 group-hover:text-brandDark ml-auto transition-colors"></i>
+                    </a>
+                    <a href="#awards" class="group flex items-center gap-4 p-4 rounded-xl border border-gray-100 hover:border-brandLight hover:bg-brandLight/40 transition-all duration-200">
+                        <span class="text-2xl">🏆</span>
+                        <p class="text-sm font-bold text-gray-900 group-hover:text-brandDark transition-colors">Awards & Honors</p>
+                        <i class="fas fa-arrow-right text-xs text-gray-300 group-hover:text-brandDark ml-auto transition-colors"></i>
+                    </a>
+                    <a href="#activities" class="group flex items-center gap-4 p-4 rounded-xl border border-gray-100 hover:border-brandLight hover:bg-brandLight/40 transition-all duration-200">
+                        <span class="text-2xl">📚</span>
+                        <p class="text-sm font-bold text-gray-900 group-hover:text-brandDark transition-colors">Academic Activities</p>
+                        <i class="fas fa-arrow-right text-xs text-gray-300 group-hover:text-brandDark ml-auto transition-colors"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Educations Section -->
+        <div id="educations" class="section-anchor opacity-0 animate-fade-in-up-2">
             <h2 class="text-3xl font-extrabold text-gray-900 mb-8 flex items-center relative inline-block">
                 <span class="mr-3 text-4xl">🎓</span> Educations
                 <span class="absolute -bottom-2 left-12 w-1/2 h-1.5 bg-brandLight rounded-full"></span>
             </h2>
-            
             <div class="space-y-6">
                 <div class="bg-white p-8 rounded-3xl shadow-sm border border-gray-100 hover:shadow-md hover:border-brandLight transition-all duration-300">
                     <div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-3">
@@ -126,18 +144,14 @@
                     <p class="text-xl text-brandDark font-semibold mb-2">
                         Master of <a href="https://ped.yonsei.ac.kr/" target="_blank" rel="noopener noreferrer" class="underline hover:text-brandAccent transition-colors duration-200">Physical Education</a> in Biomechanics
                     </p>
-                    
                     <p class="text-md text-gray-600 mb-4 font-medium flex items-center">
                         <i class="fas fa-microscope mr-2 text-gray-400"></i>
-                        <a href="https://ultrasuperpower.weebly.com/" target="_blank" rel="noopener noreferrer" class="hover:text-brandDark hover:underline transition-colors duration-200">
-                            Neuromuscular Mechanics Laboratory
-                        </a>
+                        <a href="https://ultrasuperpower.weebly.com/" target="_blank" rel="noopener noreferrer" class="hover:text-brandDark hover:underline transition-colors duration-200">Neuromuscular Mechanics Laboratory</a>
                     </p>
-
                     <div class="bg-gray-50 p-4 rounded-xl border border-gray-100 mb-3">
                         <p class="text-gray-700 text-sm md:text-base font-medium">
-                            <span class="font-bold text-gray-900 mr-2">Thesis:</span> 
-                            "Neuromuscular acute response to the plantar flexor muscle-tendon unit to unanticipated ground-level perturbation during landing"
+                            <span class="font-bold text-gray-900 mr-2">Thesis:</span>
+                            "Neuromuscular response of the plantar flexor muscle-tendon unit to unanticipated ground-level perturbation during repeated hopping"
                         </p>
                     </div>
                     <p class="text-gray-500 text-sm flex items-center mt-2">
@@ -155,19 +169,278 @@
                     <p class="text-xl text-brandDark font-semibold mb-3">
                         Bachelor of Science in <a href="https://sports.cha.ac.kr/" target="_blank" rel="noopener noreferrer" class="underline hover:text-brandAccent transition-colors duration-200">Sports Medicine</a>
                     </p>
-                    
                     <div class="my-5">
                         <img src="./cha.jpg" alt="CHA University Graduation" class="w-full md:w-3/4 max-w-lg rounded-2xl shadow-sm border border-gray-100 object-cover">
                     </div>
-
                     <p class="text-gray-500 text-sm flex items-center mt-2">
                         <i class="fas fa-map-marker-alt mr-2 text-brandDark"></i> Pocheon, South Korea
                     </p>
                 </div>
             </div>
         </div>
-        
-    </main>
 
+        <!-- Awards & Honors Section -->
+        <div id="awards" class="section-anchor mt-20 opacity-0 animate-fade-in-up-2">
+            <h2 class="text-3xl font-extrabold text-gray-900 mb-8 flex items-center relative inline-block">
+                <span class="mr-3 text-4xl">🏆</span> Awards & Honors
+                <span class="absolute -bottom-2 left-12 w-1/2 h-1.5 bg-brandLight rounded-full"></span>
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+                <div class="bg-white rounded-2xl shadow-sm border border-gray-100 hover:shadow-md hover:border-brandLight transition-all duration-300 flex flex-col overflow-hidden">
+                    <div class="h-64 bg-gray-50 flex items-center justify-center p-6 border-b border-gray-100">
+                        <img src="./한국연구재단로고.png" alt="NRF Logo" class="h-40 w-auto object-contain">
+                    </div>
+                    <div class="p-6 flex flex-col flex-grow">
+                        <span class="text-xs font-bold text-brandDark bg-brandLight px-2.5 py-1 rounded-md self-start mb-2">2025 - 2026</span>
+                        <h4 class="text-lg font-bold text-gray-900 leading-snug mb-2">Master's Student Research Fellowship</h4>
+                        <p class="text-gray-600 text-sm flex-grow">Humanities and Social Sciences Division (Arts/Physical Education), National Research Foundation of Korea</p>
+                        <p class="text-gray-400 text-xs mt-3 font-medium">(No. 2025S1A5B5A20019907)</p>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-2xl shadow-sm border border-gray-100 hover:shadow-md hover:border-brandLight transition-all duration-300 flex flex-col overflow-hidden">
+                    <div class="h-64 flex">
+                        <img src="./2025_KSBB_1.jpg" alt="2025 KSBB Award 1" class="w-1/2 h-full object-cover border-r border-white">
+                        <img src="./2025_KSBB_2.jpg" alt="2025 KSBB Award 2" class="w-1/2 h-full object-cover">
+                    </div>
+                    <div class="p-6 flex flex-col flex-grow">
+                        <span class="text-xs font-bold text-brandDark bg-brandLight px-2.5 py-1 rounded-md self-start mb-2">2025</span>
+                        <h4 class="text-lg font-bold text-gray-900 leading-snug mb-2">Best Presentation Award</h4>
+                        <p class="text-gray-600 text-sm flex-grow">2025 KSBB International Conference, Korean Society of Sport Biomechanics</p>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-2xl shadow-sm border border-gray-100 hover:shadow-md hover:border-brandLight transition-all duration-300 flex flex-col overflow-hidden">
+                    <div class="h-64 bg-gray-50 flex items-center justify-center p-6 border-b border-gray-100">
+                        <img src="./OMC.png" alt="OMC Summit Scholarship" class="h-40 w-auto object-contain">
+                    </div>
+                    <div class="p-6 flex flex-col flex-grow">
+                        <span class="text-xs font-bold text-brandDark bg-brandLight px-2.5 py-1 rounded-md self-start mb-2">2024 - 2026</span>
+                        <h4 class="text-lg font-bold text-gray-900 leading-snug mb-2">Summit Scholarship</h4>
+                        <p class="text-gray-600 text-sm flex-grow">Oneness Mission Club</p>
+                        <div class="mt-4 flex flex-wrap gap-2">
+                            <a href="https://iomc.kr/18" target="_blank" rel="noopener noreferrer" class="text-xs font-semibold text-gray-700 bg-gray-100 hover:bg-gray-200 px-3 py-1.5 rounded-lg transition-colors flex items-center">
+                                <i class="fas fa-globe mr-1.5"></i> Official Site
+                            </a>
+                            <a href="https://pf.kakao.com/_MqgUxj/109708871" target="_blank" rel="noopener noreferrer" class="text-xs font-semibold text-brandDark bg-brandLight hover:bg-brandLight/70 px-3 py-1.5 rounded-lg transition-colors flex items-center">
+                                <i class="fas fa-link mr-1.5"></i> Forum Link
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-2xl shadow-sm border border-gray-100 hover:shadow-md hover:border-brandLight transition-all duration-300 flex flex-col overflow-hidden">
+                    <div class="h-64">
+                        <img src="./YonseiScholarship.jpg" alt="Yonsei Scholarship" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6 flex flex-col flex-grow">
+                        <span class="text-xs font-bold text-brandDark bg-brandLight px-2.5 py-1 rounded-md self-start mb-2">2024 - 2025</span>
+                        <h4 class="text-lg font-bold text-gray-900 leading-snug mb-2">Graduate Student Research Assistant Scholarship</h4>
+                        <p class="text-gray-600 text-sm flex-grow">Department of Physical Education, Yonsei University</p>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-2xl shadow-sm border border-gray-100 hover:shadow-md hover:border-brandLight transition-all duration-300 flex flex-col overflow-hidden">
+                    <div class="h-64">
+                        <img src="./2024_KSBB.jpg" alt="2024 KSBB Fall Conference Award" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6 flex flex-col flex-grow">
+                        <span class="text-xs font-bold text-brandDark bg-brandLight px-2.5 py-1 rounded-md self-start mb-2">2024</span>
+                        <h4 class="text-lg font-bold text-gray-900 leading-snug mb-2">Best Presentation Award <span class="text-gray-500 text-sm font-normal block mt-0.5">(Co-author)</span></h4>
+                        <p class="text-gray-600 text-sm flex-grow">2024 KSBB Fall Conference, Korean Society of Sport Biomechanics</p>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-2xl shadow-sm border border-gray-100 hover:shadow-md hover:border-brandLight transition-all duration-300 flex flex-col overflow-hidden group">
+                    <div class="h-64 bg-brandLight/50 flex items-center justify-center relative overflow-hidden">
+                        <i class="fas fa-medal text-7xl text-brandDark/20 group-hover:scale-110 transition-transform duration-500"></i>
+                    </div>
+                    <div class="p-6 flex flex-col flex-grow">
+                        <span class="text-xs font-bold text-brandDark bg-brandLight px-2.5 py-1 rounded-md self-start mb-2">2019, 2022</span>
+                        <h4 class="text-lg font-bold text-gray-900 leading-snug mb-2">Top Remnant Scholarship</h4>
+                        <p class="text-gray-600 text-sm flex-grow">Immanuel Seoul Scholarship Committee, World Evangelization Evangelism Alliance</p>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-2xl shadow-sm border border-gray-100 hover:shadow-md hover:border-brandLight transition-all duration-300 flex flex-col overflow-hidden">
+                    <div class="h-64 bg-gray-50 flex items-center justify-center p-4 border-b border-gray-100">
+                        <img src="./CHAScholarship.png" alt="CHA Scholarship" class="max-w-full max-h-full object-contain">
+                    </div>
+                    <div class="p-6 flex flex-col flex-grow">
+                        <span class="text-xs font-bold text-brandDark bg-brandLight px-2.5 py-1 rounded-md self-start mb-2">2021 - 2022</span>
+                        <h4 class="text-lg font-bold text-gray-900 leading-snug mb-2">Student Representative Scholarship</h4>
+                        <p class="text-gray-600 text-sm flex-grow">Department of Science in Sports Medicine, CHA University</p>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-2xl shadow-sm border border-gray-100 hover:shadow-md hover:border-brandLight transition-all duration-300 flex flex-col overflow-hidden">
+                    <div class="h-64">
+                        <img src="./CHABEST.jpg" alt="CHA Best Presentation Award" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6 flex flex-col flex-grow">
+                        <span class="text-xs font-bold text-brandDark bg-brandLight px-2.5 py-1 rounded-md self-start mb-2">2021</span>
+                        <h4 class="text-lg font-bold text-gray-900 leading-snug mb-2">Best Presentation Award</h4>
+                        <p class="text-gray-600 text-sm flex-grow">Department of Science in Sports Medicine, CHA University</p>
+                        <div class="mt-4 flex flex-row gap-2">
+                            <a href="./읏챠읏챠.pdf" target="_blank" class="inline-flex items-center px-4 py-1.5 bg-transparent hover:bg-gray-50 text-gray-800 rounded-full border border-gray-200 transition-colors text-sm font-semibold whitespace-nowrap">
+                                <i class="fas fa-file-powerpoint text-brandDark mr-2 text-sm"></i> Presentation
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-2xl shadow-sm border border-gray-100 hover:shadow-md hover:border-brandLight transition-all duration-300 flex flex-col overflow-hidden">
+                    <div class="h-64 bg-gray-50 flex items-center justify-center p-2 border-b border-gray-100">
+                        <img src="./Silver.jpg" alt="Silver Award" class="w-full h-full object-contain">
+                    </div>
+                    <div class="p-6 flex flex-col flex-grow">
+                        <span class="text-xs font-bold text-brandDark bg-brandLight px-2.5 py-1 rounded-md self-start mb-2">2021</span>
+                        <h4 class="text-lg font-bold text-gray-900 leading-snug mb-2">Silver Award</h4>
+                        <p class="text-gray-600 text-sm flex-grow">20th National Undergraduate Kinesiology Conference</p>
+                        <div class="mt-4 flex flex-row gap-2">
+                            <a href="./차의과학대학교_제20회대학생운동학학술발표대회초록.pdf" target="_blank" class="inline-flex items-center px-3 py-1.5 bg-transparent hover:bg-gray-50 text-gray-800 rounded-full border border-gray-200 transition-colors text-sm font-semibold whitespace-nowrap">
+                                <i class="fas fa-file-lines text-brandDark mr-1.5 text-sm"></i> Abstract
+                            </a>
+                            <a href="./차의과학대학교_제20회대학생운동학학술발표대회.pdf" target="_blank" class="inline-flex items-center px-3 py-1.5 bg-transparent hover:bg-gray-50 text-gray-800 rounded-full border border-gray-200 transition-colors text-sm font-semibold whitespace-nowrap">
+                                <i class="fas fa-file-powerpoint text-brandDark mr-1.5 text-sm"></i> Presentation
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Academic Activities Section -->
+        <div id="activities" class="section-anchor mt-20 opacity-0 animate-fade-in-up-2">
+            <h2 class="text-3xl font-extrabold text-gray-900 mb-8 flex items-center relative inline-block">
+                <span class="mr-3 text-4xl">📚</span> Academic Activities
+                <span class="absolute -bottom-2 left-12 w-1/2 h-1.5 bg-brandLight rounded-full"></span>
+            </h2>
+
+            <div class="space-y-5">
+
+                <!-- Item 1: Certificate of Completion -->
+                <div class="bg-white p-6 md:p-8 rounded-2xl shadow-sm border border-gray-100 hover:shadow-md hover:border-brandLight transition-all duration-300 flex flex-col md:flex-row gap-6 items-start">
+                    <div class="shrink-0 w-16 h-16 bg-brandLight rounded-2xl flex items-center justify-center">
+                        <i class="fas fa-certificate text-2xl text-brandDark"></i>
+                    </div>
+                    <div class="flex-grow">
+                        <div class="flex flex-col md:flex-row md:items-center justify-between gap-2 mb-2">
+                            <h4 class="text-lg font-bold text-gray-900">Certificate of Completion</h4>
+                            <span class="text-xs font-bold text-brandDark bg-brandLight px-2.5 py-1 rounded-md self-start md:self-auto whitespace-nowrap">May – Jun 2025</span>
+                        </div>
+                        <p class="text-brandDark font-semibold text-sm mb-1">Practical English Communication Skills for Academic Life</p>
+                        <p class="text-gray-500 text-sm mb-3">Yonsei University Library & BK21 Graduate School Innovation Project</p>
+                        <p class="text-gray-600 text-sm mb-4 leading-relaxed">Completed a 4-week academic English workshop covering cross-cultural communication, clarity in expression, interactive dialogue, and real-world application.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <a href="./PracticalEnglish.jpg" target="_blank" rel="noopener noreferrer" class="inline-flex items-center px-3 py-1.5 bg-transparent hover:bg-gray-50 text-gray-800 rounded-full border border-gray-200 transition-colors text-sm font-semibold whitespace-nowrap">
+                                <i class="fas fa-image text-brandDark mr-1.5 text-sm"></i> Program Poster
+                            </a>
+                            <a href="./PracticalEnglish_pdf.jpg" target="_blank" rel="noopener noreferrer" class="inline-flex items-center px-3 py-1.5 bg-transparent hover:bg-gray-50 text-gray-800 rounded-full border border-gray-200 transition-colors text-sm font-semibold whitespace-nowrap">
+                                <i class="fas fa-file-pdf text-brandDark mr-1.5 text-sm"></i> Certificate
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 2: Laboratory Representative -->
+                <div class="bg-white p-6 md:p-8 rounded-2xl shadow-sm border border-gray-100 hover:shadow-md hover:border-brandLight transition-all duration-300 flex flex-col md:flex-row gap-6 items-start">
+                    <div class="shrink-0 w-16 h-16 bg-brandLight rounded-2xl flex items-center justify-center">
+                        <i class="fas fa-globe text-2xl text-brandDark"></i>
+                    </div>
+                    <div class="flex-grow">
+                        <div class="flex flex-col md:flex-row md:items-center justify-between gap-2 mb-2">
+                            <h4 class="text-lg font-bold text-gray-900">Laboratory Representative — International Student Visit</h4>
+                            <span class="text-xs font-bold text-brandDark bg-brandLight px-2.5 py-1 rounded-md self-start md:self-auto whitespace-nowrap">May 2026</span>
+                        </div>
+                        <p class="text-brandDark font-semibold text-sm mb-1">Neuromuscular Mechanics Laboratory, Yonsei University</p>
+                        <p class="text-gray-500 text-sm mb-3">University of Texas at San Antonio, College for Health, Community & Policy</p>
+                        <p class="text-gray-600 text-sm mb-4 leading-relaxed">Served as the laboratory representative to welcome a delegation of approximately 20 students and faculty from UT San Antonio. Delivered a presentation introducing the lab's research focus and ongoing projects.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <a href="./HCAP.jpg" target="_blank" rel="noopener noreferrer" class="inline-flex items-center px-3 py-1.5 bg-transparent hover:bg-gray-50 text-gray-800 rounded-full border border-gray-200 transition-colors text-sm font-semibold whitespace-nowrap">
+                                <i class="fas fa-image text-brandDark mr-1.5 text-sm"></i> Photo
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 3: Online Column Contributor -->
+                <div class="bg-white p-6 md:p-8 rounded-2xl shadow-sm border border-gray-100 hover:shadow-md hover:border-brandLight transition-all duration-300 flex flex-col md:flex-row gap-6 items-start">
+                    <div class="shrink-0 w-16 h-16 bg-brandLight rounded-2xl flex items-center justify-center">
+                        <i class="fas fa-pen-nib text-2xl text-brandDark"></i>
+                    </div>
+                    <div class="flex-grow">
+                        <div class="flex flex-col md:flex-row md:items-center justify-between gap-2 mb-2">
+                            <h4 class="text-lg font-bold text-gray-900">Online Column Contributor</h4>
+                            <span class="text-xs font-bold text-brandDark bg-brandLight px-2.5 py-1 rounded-md self-start md:self-auto whitespace-nowrap">Nov 2021</span>
+                        </div>
+                        <p class="text-brandDark font-semibold text-sm mb-1">University Sports Medicine Column</p>
+                        <p class="text-gray-500 text-sm mb-3">CHA University, Department of Sports Medicine</p>
+                        <p class="text-gray-600 text-sm mb-4 leading-relaxed">Authored a column on the relationship between cervical posture, plantar pressure balance, and lung capacity, published through the university's sports medicine platform.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <a href="https://www.instagram.com/p/CW5UNGavKyv/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center px-3 py-1.5 bg-transparent hover:bg-gray-50 text-gray-800 rounded-full border border-gray-200 transition-colors text-sm font-semibold whitespace-nowrap">
+                                <i class="fab fa-instagram text-brandDark mr-1.5 text-sm"></i> View Post
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 4: Undergraduate Research Presenter & Conference Initiator -->
+                <div class="bg-white p-6 md:p-8 rounded-2xl shadow-sm border border-gray-100 hover:shadow-md hover:border-brandLight transition-all duration-300 flex flex-col md:flex-row gap-6 items-start">
+                    <div class="shrink-0 w-16 h-16 bg-brandLight rounded-2xl flex items-center justify-center">
+                        <i class="fas fa-chalkboard-user text-2xl text-brandDark"></i>
+                    </div>
+                    <div class="flex-grow">
+                        <div class="flex flex-col md:flex-row md:items-center justify-between gap-2 mb-2">
+                            <h4 class="text-lg font-bold text-gray-900">Undergraduate Research Presenter & Conference Initiator</h4>
+                            <span class="text-xs font-bold text-brandDark bg-brandLight px-2.5 py-1 rounded-md self-start md:self-auto whitespace-nowrap">Nov 2020</span>
+                        </div>
+                        <p class="text-brandDark font-semibold text-sm mb-1">Department of Sports Medicine, CHA University</p>
+                        <p class="text-gray-600 text-sm mb-4 leading-relaxed">Proposed and advocated for the creation of a departmental academic conference to the department chair, which led to the establishment of what has since become an annual award-based competition. Presented undergraduate research on human movement analysis at the inaugural event.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <a href="./거북목.jpg" target="_blank" rel="noopener noreferrer" class="inline-flex items-center px-3 py-1.5 bg-transparent hover:bg-gray-50 text-gray-800 rounded-full border border-gray-200 transition-colors text-sm font-semibold whitespace-nowrap">
+                                <i class="fas fa-image text-brandDark mr-1.5 text-sm"></i> Photo
+                            </a>
+                            <a href="./거북목에대해아시나요.pdf" target="_blank" rel="noopener noreferrer" class="inline-flex items-center px-3 py-1.5 bg-transparent hover:bg-gray-50 text-gray-800 rounded-full border border-gray-200 transition-colors text-sm font-semibold whitespace-nowrap">
+                                <i class="fas fa-file-pdf text-brandDark mr-1.5 text-sm"></i> Presentation
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </main>
+<button id="scrollToTopBtn" class="fixed bottom-8 right-8 w-12 h-12 bg-brandDark text-white rounded-full shadow-lg flex items-center justify-center text-lg hover:bg-brandAccent hover:-translate-y-1 transition-all duration-300 z-50 opacity-0 pointer-events-none">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const scrollToTopBtn = document.getElementById('scrollToTopBtn');
+
+            // 스크롤 이벤트 리스너: 화면이 300px 이상 내려가면 버튼 표시
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 300) {
+                    scrollToTopBtn.classList.remove('opacity-0', 'pointer-events-none');
+                    scrollToTopBtn.classList.add('opacity-100');
+                } else {
+                    scrollToTopBtn.classList.remove('opacity-100');
+                    scrollToTopBtn.classList.add('opacity-0', 'pointer-events-none');
+                }
+            });
+
+            // 클릭 이벤트 리스너: 버튼 클릭 시 페이지 최상단으로 부드럽게 이동
+            scrollToTopBtn.addEventListener('click', () => {
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
 </body>
 </html>

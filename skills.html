@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skills - Yeeun Choe</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { sans: ['Inter', 'sans-serif'] },
+                    colors: {
+                        brandLight: '#E8F1EC', 
+                        brandDark: '#3A634B', 
+                        brandAccent: '#2C4C38',
+                    },
+                    keyframes: {
+                        fadeInUp: {
+                            '0%': { opacity: '0', transform: 'translateY(15px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' },
+                        }
+                    },
+                    animation: {
+                        'fade-in-up-1': 'fadeInUp 0.6s ease-out forwards',
+                        'fade-in-up-2': 'fadeInUp 0.6s ease-out 0.2s forwards',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-[#F8FAFC] text-gray-800 antialiased selection:bg-brandLight selection:text-brandDark min-h-screen flex flex-col">
+
+    <nav class="fixed w-full top-0 bg-[#F8FAFC]/90 backdrop-blur-md z-50 border-b border-gray-200 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-6 lg:px-12">
+            <div class="flex justify-between h-20 items-center">
+                
+                <a href="index.html" class="text-xl font-extrabold text-brandDark tracking-tight hover:opacity-80 transition-opacity">
+                    Yeeun Choe
+                </a>
+
+                <ul class="flex space-x-8 items-center text-sm font-semibold text-gray-600 tracking-wide">
+                    <li class="py-6">
+                        <a href="about.html" class="hover:text-brandDark transition-colors duration-200">About</a>
+                    </li>
+                    <li class="py-6">
+                        <a href="research.html" class="hover:text-brandDark transition-colors duration-200">Research</a>
+                    </li>
+                    <li class="relative group py-6">
+                        <a href="publications.html" class="hover:text-brandDark transition-colors duration-200">Publications</a>
+                        <ul class="absolute right-0 top-full hidden w-48 bg-white shadow-xl rounded-xl border border-gray-50 py-2 group-hover:block transition-all">
+                            <li><a href="publications.html#journal-articles" class="block px-5 py-2.5 text-sm hover:bg-brandLight hover:text-brandDark transition">Journal Articles</a></li>
+                            <li><a href="publications.html#conference-papers" class="block px-5 py-2.5 text-sm hover:bg-brandLight hover:text-brandDark transition">Conference Papers</a></li>
+                        </ul>
+                    </li>
+                    <li class="py-6 relative">
+                        <a href="skills.html" class="text-brandDark transition-colors duration-200 after:content-[''] after:absolute after:bottom-4 after:left-0 after:w-full after:h-0.5 after:bg-brandDark">Skills</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main class="flex-grow max-w-4xl mx-auto w-full px-6 lg:px-12 pt-32 pb-24">
+        
+        <div class="mb-16 text-center opacity-0 animate-fade-in-up-1">
+            <h1 class="text-4xl md:text-5xl font-extrabold text-gray-900 tracking-tight mb-4">Skills</h1>
+            <div class="w-16 h-1.5 bg-brandDark rounded-full mx-auto opacity-80"></div>
+        </div>
+
+        <div class="bg-white p-8 md:p-12 rounded-3xl shadow-sm border border-gray-100 hover:shadow-md hover:border-brandLight transition-all duration-300 opacity-0 animate-fade-in-up-2">
+            
+            <div class="overflow-x-auto">
+                <table class="w-full min-w-[500px] text-sm md:text-base border-collapse">
+                    <tbody class="text-gray-800">
+                        <!-- Instrumentation -->
+                        <tr class="hover:bg-gray-50 transition-colors border-b border-transparent group">
+                            <td class="py-4 px-2 w-[35%]"><span class="px-3 py-1.5 rounded-full text-xs font-bold bg-brandLight text-brandDark tracking-wide">Instrumentation</span></td>
+                            <td class="py-4 px-2 flex items-center gap-3 font-semibold"><img src="./Vicon.png" alt="Vicon" class="w-6 h-6 object-contain rounded-sm"> Vicon</td>
+                            <td class="py-4 px-2 text-right w-[25%]"><div class="flex items-center justify-end gap-4 text-gray-500 font-medium">100% <div class="w-20 h-2 bg-gray-100 rounded-full overflow-hidden"><div class="h-full bg-brandDark rounded-full" style="width: 100%;"></div></div></div></td>
+                        </tr>
+                        <tr class="hover:bg-gray-50 transition-colors border-b border-transparent group">
+                            <td class="py-4 px-2"><span class="px-3 py-1.5 rounded-full text-xs font-bold bg-brandLight text-brandDark tracking-wide">Instrumentation</span></td>
+                            <td class="py-4 px-2 flex items-center gap-3 font-semibold"><img src="./Delsys.png" alt="Delsys" class="w-6 h-6 object-contain rounded-sm"> Delsys</td>
+                            <td class="py-4 px-2 text-right"><div class="flex items-center justify-end gap-4 text-gray-500 font-medium">80% <div class="w-20 h-2 bg-gray-100 rounded-full overflow-hidden"><div class="h-full bg-brandDark rounded-full" style="width: 80%;"></div></div></div></td>
+                        </tr>
+                        <tr class="hover:bg-gray-50 transition-colors border-b border-transparent group">
+                            <td class="py-4 px-2"><span class="px-3 py-1.5 rounded-full text-xs font-bold bg-brandLight text-brandDark tracking-wide">Instrumentation</span></td>
+                            <td class="py-4 px-2 flex items-center gap-3 font-semibold"><img src="./Telemed.png" alt="Telemed" class="w-6 h-6 object-contain rounded-sm"> Telemed</td>
+                            <td class="py-4 px-2 text-right"><div class="flex items-center justify-end gap-4 text-gray-500 font-medium">80% <div class="w-20 h-2 bg-gray-100 rounded-full overflow-hidden"><div class="h-full bg-brandDark rounded-full" style="width: 80%;"></div></div></div></td>
+                        </tr>
+                        <tr class="hover:bg-gray-50 transition-colors border-b-2 border-gray-200 group">
+                            <td class="py-4 px-2"><span class="px-3 py-1.5 rounded-full text-xs font-bold bg-brandLight text-brandDark tracking-wide">Instrumentation</span></td>
+                            <td class="py-4 px-2 flex items-center gap-3 font-semibold"><img src="./Ergoneers.png" alt="Ergoneers" class="w-6 h-6 object-contain rounded-sm"> Ergoneers</td>
+                            <td class="py-4 px-2 text-right"><div class="flex items-center justify-end gap-4 text-gray-500 font-medium">70% <div class="w-20 h-2 bg-gray-100 rounded-full overflow-hidden"><div class="h-full bg-brandDark rounded-full" style="width: 70%;"></div></div></div></td>
+                        </tr>
+
+                        <!-- Technical -->
+                        <tr class="hover:bg-gray-50 transition-colors border-b border-transparent group">
+                            <td class="py-4 px-2"><span class="px-3 py-1.5 rounded-full text-xs font-bold bg-brandLight text-brandDark tracking-wide">Technical</span></td>
+                            <td class="py-4 px-2 flex items-center gap-3 font-semibold"><img src="./R.png" alt="R" class="w-6 h-6 object-contain rounded-sm"> R</td>
+                            <td class="py-4 px-2 text-right"><div class="flex items-center justify-end gap-4 text-gray-500 font-medium">80% <div class="w-20 h-2 bg-gray-100 rounded-full overflow-hidden"><div class="h-full bg-brandDark rounded-full" style="width: 80%;"></div></div></div></td>
+                        </tr>
+                        <tr class="hover:bg-gray-50 transition-colors border-b border-transparent group">
+                            <td class="py-4 px-2"><span class="px-3 py-1.5 rounded-full text-xs font-bold bg-brandLight text-brandDark tracking-wide">Technical</span></td>
+                            <td class="py-4 px-2 flex items-center gap-3 font-semibold"><img src="./Python.png" alt="Python" class="w-6 h-6 object-contain rounded-sm"> Python</td>
+                            <td class="py-4 px-2 text-right"><div class="flex items-center justify-end gap-4 text-gray-500 font-medium">70% <div class="w-20 h-2 bg-gray-100 rounded-full overflow-hidden"><div class="h-full bg-brandDark rounded-full" style="width: 70%;"></div></div></div></td>
+                        </tr>
+                        <tr class="hover:bg-gray-50 transition-colors border-b border-transparent group">
+                            <td class="py-4 px-2"><span class="px-3 py-1.5 rounded-full text-xs font-bold bg-brandLight text-brandDark tracking-wide">Technical</span></td>
+                            <td class="py-4 px-2 flex items-center gap-3 font-semibold"><img src="./Matlab.png" alt="Matlab" class="w-6 h-6 object-contain rounded-sm"> Matlab</td>
+                            <td class="py-4 px-2 text-right"><div class="flex items-center justify-end gap-4 text-gray-500 font-medium">60% <div class="w-20 h-2 bg-gray-100 rounded-full overflow-hidden"><div class="h-full bg-brandDark rounded-full" style="width: 60%;"></div></div></div></td>
+                        </tr>
+                        <tr class="hover:bg-gray-50 transition-colors border-b-2 border-gray-200 group">
+                            <td class="py-4 px-2"><span class="px-3 py-1.5 rounded-full text-xs font-bold bg-brandLight text-brandDark tracking-wide">Technical</span></td>
+                            <td class="py-4 px-2 flex items-center gap-3 font-semibold"><img src="./SPSS.png" alt="SPSS" class="w-6 h-6 object-contain rounded-sm"> SPSS</td>
+                            <td class="py-4 px-2 text-right"><div class="flex items-center justify-end gap-4 text-gray-500 font-medium">60% <div class="w-20 h-2 bg-gray-100 rounded-full overflow-hidden"><div class="h-full bg-brandDark rounded-full" style="width: 60%;"></div></div></div></td>
+                        </tr>
+
+                        <!-- Software -->
+                        <tr class="hover:bg-gray-50 transition-colors border-b border-transparent group">
+                            <td class="py-4 px-2"><span class="px-3 py-1.5 rounded-full text-xs font-bold bg-brandLight text-brandDark tracking-wide">Software</span></td>
+                            <td class="py-4 px-2 flex items-center gap-3 font-semibold"><img src="./Opensim.png" alt="Opensim" class="w-6 h-6 object-contain rounded-sm"> Opensim</td>
+                            <td class="py-4 px-2 text-right"><div class="flex items-center justify-end gap-4 text-gray-500 font-medium">70% <div class="w-20 h-2 bg-gray-100 rounded-full overflow-hidden"><div class="h-full bg-brandDark rounded-full" style="width: 70%;"></div></div></div></td>
+                        </tr>
+                        <tr class="hover:bg-gray-50 transition-colors border-b border-transparent group">
+                            <td class="py-4 px-2"><span class="px-3 py-1.5 rounded-full text-xs font-bold bg-brandLight text-brandDark tracking-wide">Software</span></td>
+                            <td class="py-4 px-2 flex items-center gap-3 font-semibold"><img src="./OpenCap.png" alt="OpenCap" class="w-6 h-6 object-contain rounded-sm"> OpenCap</td>
+                            <td class="py-4 px-2 text-right"><div class="flex items-center justify-end gap-4 text-gray-500 font-medium">70% <div class="w-20 h-2 bg-gray-100 rounded-full overflow-hidden"><div class="h-full bg-brandDark rounded-full" style="width: 70%;"></div></div></div></td>
+                        </tr>
+                        <tr class="hover:bg-gray-50 transition-colors border-b border-transparent group">
+                            <td class="py-4 px-2"><span class="px-3 py-1.5 rounded-full text-xs font-bold bg-brandLight text-brandDark tracking-wide">Software</span></td>
+                            <td class="py-4 px-2 flex items-center gap-3 font-semibold"><img src="./Mokka.png" alt="Mokka" class="w-6 h-6 object-contain rounded-sm"> Mokka</td>
+                            <td class="py-4 px-2 text-right"><div class="flex items-center justify-end gap-4 text-gray-500 font-medium">60% <div class="w-20 h-2 bg-gray-100 rounded-full overflow-hidden"><div class="h-full bg-brandDark rounded-full" style="width: 60%;"></div></div></div></td>
+                        </tr>
+                        <tr class="hover:bg-gray-50 transition-colors border-b border-transparent group">
+                            <td class="py-4 px-2"><span class="px-3 py-1.5 rounded-full text-xs font-bold bg-brandLight text-brandDark tracking-wide">Software</span></td>
+                            <td class="py-4 px-2 flex items-center gap-3 font-semibold"><img src="./D-Lab.jpg" alt="D-Lab" class="w-6 h-6 object-contain rounded-sm"> D-Lab</td>
+                            <td class="py-4 px-2 text-right"><div class="flex items-center justify-end gap-4 text-gray-500 font-medium">60% <div class="w-20 h-2 bg-gray-100 rounded-full overflow-hidden"><div class="h-full bg-brandDark rounded-full" style="width: 60%;"></div></div></div></td>
+                        </tr>
+                        <tr class="hover:bg-gray-50 transition-colors border-b border-transparent group">
+                            <td class="py-4 px-2"><span class="px-3 py-1.5 rounded-full text-xs font-bold bg-brandLight text-brandDark tracking-wide">Software</span></td>
+                            <td class="py-4 px-2 flex items-center gap-3 font-semibold"><img src="./Kinovea.png" alt="Kinovea" class="w-6 h-6 object-contain rounded-sm"> Kinovea</td>
+                            <td class="py-4 px-2 text-right"><div class="flex items-center justify-end gap-4 text-gray-500 font-medium">50% <div class="w-20 h-2 bg-gray-100 rounded-full overflow-hidden"><div class="h-full bg-brandDark rounded-full" style="width: 50%;"></div></div></div></td>
+                        </tr>
+                        <tr class="hover:bg-gray-50 transition-colors border-b-2 border-gray-200 group">
+                            <td class="py-4 px-2"><span class="px-3 py-1.5 rounded-full text-xs font-bold bg-brandLight text-brandDark tracking-wide">Software</span></td>
+                            <td class="py-4 px-2 flex items-center gap-3 font-semibold"><img src="./Visual_3D.jpg" alt="Visual 3D" class="w-6 h-6 object-contain rounded-sm"> Visual 3D</td>
+                            <td class="py-4 px-2 text-right"><div class="flex items-center justify-end gap-4 text-gray-500 font-medium">30% <div class="w-20 h-2 bg-gray-100 rounded-full overflow-hidden"><div class="h-full bg-brandDark rounded-full" style="width: 30%;"></div></div></div></td>
+                        </tr>
+
+                        <!-- Document Collaboration -->
+                        <tr class="hover:bg-gray-50 transition-colors border-b border-transparent group">
+                            <td class="py-4 px-2"><span class="px-3 py-1.5 rounded-full text-xs font-bold bg-brandLight text-brandDark tracking-wide">Document Collaboration</span></td>
+                            <td class="py-4 px-2 flex items-center gap-3 font-semibold"><img src="./Notion.png" alt="Notion" class="w-6 h-6 object-contain rounded-sm"> Notion</td>
+                            <td class="py-4 px-2 text-right"><div class="flex items-center justify-end gap-4 text-gray-500 font-medium">90% <div class="w-20 h-2 bg-gray-100 rounded-full overflow-hidden"><div class="h-full bg-brandDark rounded-full" style="width: 90%;"></div></div></div></td>
+                        </tr>
+                        <tr class="hover:bg-gray-50 transition-colors border-b border-transparent group">
+                            <td class="py-4 px-2"><span class="px-3 py-1.5 rounded-full text-xs font-bold bg-brandLight text-brandDark tracking-wide">Document Collaboration</span></td>
+                            <td class="py-4 px-2 flex items-center gap-3 font-semibold"><img src="./Power_Point.png" alt="Power Point" class="w-6 h-6 object-contain rounded-sm"> Power Point</td>
+                            <td class="py-4 px-2 text-right"><div class="flex items-center justify-end gap-4 text-gray-500 font-medium">90% <div class="w-20 h-2 bg-gray-100 rounded-full overflow-hidden"><div class="h-full bg-brandDark rounded-full" style="width: 90%;"></div></div></div></td>
+                        </tr>
+                        <tr class="hover:bg-gray-50 transition-colors border-b border-transparent group">
+                            <td class="py-4 px-2"><span class="px-3 py-1.5 rounded-full text-xs font-bold bg-brandLight text-brandDark tracking-wide">Document Collaboration</span></td>
+                            <td class="py-4 px-2 flex items-center gap-3 font-semibold"><img src="./Word.png" alt="Word" class="w-6 h-6 object-contain rounded-sm"> Word</td>
+                            <td class="py-4 px-2 text-right"><div class="flex items-center justify-end gap-4 text-gray-500 font-medium">90% <div class="w-20 h-2 bg-gray-100 rounded-full overflow-hidden"><div class="h-full bg-brandDark rounded-full" style="width: 90%;"></div></div></div></td>
+                        </tr>
+                        <tr class="hover:bg-gray-50 transition-colors border-b-2 border-gray-200 group">
+                            <td class="py-4 px-2"><span class="px-3 py-1.5 rounded-full text-xs font-bold bg-brandLight text-brandDark tracking-wide">Document Collaboration</span></td>
+                            <td class="py-4 px-2 flex items-center gap-3 font-semibold"><img src="./Excel.png" alt="Excel" class="w-6 h-6 object-contain rounded-sm"> Excel</td>
+                            <td class="py-4 px-2 text-right"><div class="flex items-center justify-end gap-4 text-gray-500 font-medium">70% <div class="w-20 h-2 bg-gray-100 rounded-full overflow-hidden"><div class="h-full bg-brandDark rounded-full" style="width: 70%;"></div></div></div></td>
+                        </tr>
+
+                        <!-- Language -->
+                        <tr class="hover:bg-gray-50 transition-colors border-b border-transparent group">
+                            <td class="py-4 px-2"><span class="px-3 py-1.5 rounded-full text-xs font-bold bg-brandLight text-brandDark tracking-wide">Language</span></td>
+                            <td class="py-4 px-2 flex items-center gap-3 font-semibold text-gray-900">
+                                <img src="./Korea.png" alt="Korean Flag" class="w-6 h-6 object-contain rounded-sm shadow-sm"> Korean
+                            </td>
+                            <td class="py-4 px-2 text-right"><div class="flex items-center justify-end gap-4 text-gray-500 font-medium">Native <div class="w-20 h-2 bg-gray-100 rounded-full overflow-hidden"><div class="h-full bg-brandDark rounded-full" style="width: 100%;"></div></div></div></td>
+                        </tr>
+                        <tr class="hover:bg-gray-50 transition-colors border-b border-transparent group">
+                            <td class="py-4 px-2"><span class="px-3 py-1.5 rounded-full text-xs font-bold bg-brandLight text-brandDark tracking-wide">Language</span></td>
+                            <td class="py-4 px-2 flex items-center gap-3 font-semibold text-gray-900">
+                                <img src="./US.png" alt="United States Flag" class="w-6 h-6 object-contain rounded-sm shadow-sm"> English
+                            </td>
+                            <td class="py-4 px-2 text-right"><div class="flex items-center justify-end gap-4 text-gray-500 font-medium">Intermediate <div class="w-20 h-2 bg-gray-100 rounded-full overflow-hidden"><div class="h-full bg-brandDark rounded-full" style="width: 65%;"></div></div></div></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        
+    </main>
+<button id="scrollToTopBtn" class="fixed bottom-8 right-8 w-12 h-12 bg-brandDark text-white rounded-full shadow-lg flex items-center justify-center text-lg hover:bg-brandAccent hover:-translate-y-1 transition-all duration-300 z-50 opacity-0 pointer-events-none">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const scrollToTopBtn = document.getElementById('scrollToTopBtn');
+
+            // 스크롤 이벤트 리스너: 화면이 300px 이상 내려가면 버튼 표시
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 300) {
+                    scrollToTopBtn.classList.remove('opacity-0', 'pointer-events-none');
+                    scrollToTopBtn.classList.add('opacity-100');
+                } else {
+                    scrollToTopBtn.classList.remove('opacity-100');
+                    scrollToTopBtn.classList.add('opacity-0', 'pointer-events-none');
+                }
+            });
+
+            // 클릭 이벤트 리스너: 버튼 클릭 시 페이지 최상단으로 부드럽게 이동
+            scrollToTopBtn.addEventListener('click', () => {
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
